@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* sayt ikki chetidan bir xil joy ochis uchun ishlatiladi */
+/* vaziyatga qarab, birinchi container keyin boshqa elementlar yoki */
+/* boshqa elementlar orasida container kelishi mumkin */
+.container {
+    padding: 0 250px;
+}
+/* nav */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.nav-brand {
+    display: inline-block;
+}
+.nav-logo {
+    width: 50px;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    margin-left: 40px;
+}
+.link {
+    text-decoration: none;
+    color: #333;
+    text-transform: capitalize;
+}
+.lastlink {
+    border-bottom: 2px solid #444;
+}
+/* home */
+.home {
+    padding: 250px 0;
+    background-image: url("img/watch.jpg");
+    background-repeat: no-repeat;
+    background-size: 700px;
+    background-position: right -250px bottom -30px;
+    border-bottom: 2px solid #444;
+}
+.box {
+    width: 45%;
+}
+.box-title {
+    text-transform: uppercase;
+    font-size: 35px;
+    margin: 0;
+}
+.box-text {
+    border-left: 3px solid #444;
+    padding-left: 35px;
+    margin: 45px 0;
+}
+.box-link {
+    text-decoration: none;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* articles */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+.article {
+    width: 30%;
+}
+.squares {
+    display: inline-flex;
+}
+.square {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    margin-right: 10px;
+}
+.article-link {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+}
+.article-line {
+    width: 50px;
+    height: 4px;
+    background-color: red;
+    margin-right: 5px;
+    transition: 0.2s width linear;
+} 
+.article-link:hover .article-line {
+    width: 60px;
+}
+/* band */
+.band {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.band-img {
+    width: 550px;
+}
+/* footer */
+.footer {
+    padding: 250px 0;
+    background-image: url("img/runners.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.footerbox {
+    color: white;
+    margin-left: auto;
+}
+.footerbox .box-text {
+    border-left-color: #fff;
+}
+@media(max-width:1550px){
+    .container {
+        padding: 0 120px;
+    }
+}
+@media(max-width:1500px){
+    .article {
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    .band {
+        justify-content: center;
+    }
+    .bandbox {
+        width: 80%;
+        order: 1;
+    }
+    .band-img {
+        margin-bottom: 40px;
+    }
+}
+@media(max-width:1250px){
+    .home {
+        background-size: 600px;
+    }
+    .box {
+        width: 65%;
+    }
+}
+@media(max-width:1150px){
+    .article {
+        width: 100%;
+    }
+}
+@media(max-width:980px){
+    .home {
+        background: none;
+        padding: 120px 0;
+    }
+    .box {
+        width: 100%;
+    }
+}
+@media(max-width:900px){
+    .container {
+        padding: 0 45px;
+    }
+    .footer {
+        padding: 120px 0;
+    }
+}
+@media(max-width:550px){
+    .container {
+        padding: 0 20px;
+    }
+    .home {
+        padding: 90px 0;
+    }
+    .box {
+        text-align: center;
+    }
+    .box-text {
+        border-left: none;
+        padding-left: 0;
+    }
+    .article {
+        text-align: center;
+    }
+    .footer {
+        padding: 70px 0;
+    }
+}
+@media(max-width:450px){
+    .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .item {
+        margin-left: 0;
+    }
+    .nav {
+        justify-content: center;
+    }
+    .nav-brand {
+        margin-bottom: 12px;
+    }
+}
